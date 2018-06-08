@@ -10,6 +10,7 @@ var path = require("path");
 // Import router
 // -----------------------------------------------------------------
 var index_1 = require("./router/index");
+var blog_1 = require("./router/blog");
 // -----------------------------------------------------------------
 // Attributes
 // -----------------------------------------------------------------
@@ -25,5 +26,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.)
 app.use('/', index_1.default);
+app.use('/blog', blog_1.default);
 exports.default = app;
 //# sourceMappingURL=app.js.map

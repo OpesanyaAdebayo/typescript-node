@@ -9,6 +9,7 @@ import * as path from 'path';
 // Import router
 // -----------------------------------------------------------------
 import { default as index } from "./router/index";
+import { default as blog } from "./router/blog";
 
 // -----------------------------------------------------------------
 // Attributes
@@ -27,6 +28,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.)
 app.use('/', index)
+app.use('/blog', blog)
 
 
 export default app
