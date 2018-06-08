@@ -6,6 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+var mongoose = require("mongoose");
+mongoose.connect('mongodb://graphqltest:graphqltest1@ds153460.mlab.com:53460/graphqltest')
+    .then(function () { return console.log("connected to mongo"); })
+    .catch(function (err) { return console.error(err); });
 // -----------------------------------------------------------------
 // Import router
 // -----------------------------------------------------------------

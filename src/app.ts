@@ -5,6 +5,10 @@ import * as express from 'express'
 import * as bodyParser from 'body-parser';
 import * as path from 'path';
 
+import * as mongoose from 'mongoose'
+mongoose.connect('mongodb://graphqltest:graphqltest1@ds153460.mlab.com:53460/graphqltest')
+.then(() => console.log("connected to mongo"))
+.catch(err => console.error(err))
 // -----------------------------------------------------------------
 // Import router
 // -----------------------------------------------------------------
